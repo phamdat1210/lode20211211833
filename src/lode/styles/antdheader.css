@@ -1,0 +1,56 @@
+.header-container {
+    display: flex;
+    width: 100%;
+    background-color: black !important;
+    padding: 0;
+    flex-direction: column;
+}
+.container-logo {
+    align-items: center;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1400px;
+}
+.nav-brands {
+    height: 60px;
+    width: 116px;
+    display: inline-block;
+    padding-top: 5px;
+    padding-bottom: 0.40625rem;
+    font-size: 1.125rem;
+    line-height: inherit;
+    white-space: nowrap;
+}
+.__img{
+    width: 100%;
+}
+.group_btn {
+    display: flex;
+}
+.group_btn .btn_login {
+    padding: 20px;
+    align-items: center;
+    display: flex;
+    margin-right: 12px;
+    font-size: 18px;
+    border-radius: 24px;
+    background: #ffff00;
+    color: black;
+    font-weight: bold;
+    border-color: #ffff00;
+}
+.group_btn .btn_register {
+    padding: 20px;
+    align-items: center;
+    display: flex;
+    margin-left: 12px;
+    font-size: 18px;
+    border-radius: 24px;
+    background: #ffff00;
+    color: black;
+    font-weight: bold;
+    border-color: #ffff00;
+}
