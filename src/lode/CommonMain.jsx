@@ -1,20 +1,18 @@
 import React from 'react';
-import {Layout} from "antd";
-import AntdHeader from "./components/AntdHeader";
-import AntdMenu from "./components/AntdMenu";
-import AntdFooter from "./components/AntdFooter";
-const { Content } = Layout;
+import Footer from './components/Footer';
+import Header from './components/Header';
+import Login from './components/Login';
 
 const CommonMain = ({children}) => {
 	return (
-		<Layout>
-			<AntdHeader/>
-			<AntdMenu/>
-			<Content>
+		<>
+			<Header/>
+			<main>
 				{children}
-			</Content>
-			<AntdFooter/>
-		</Layout>
+			</main>
+			<Login/>
+			<Footer/>
+		</>
 	);
 };
 
