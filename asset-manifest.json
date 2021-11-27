@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/lode20211211833/static/css/main.ea594fdb.chunk.css",
+    "main.js": "/lode20211211833/static/js/main.1b274e27.chunk.js",
+    "main.js.map": "/lode20211211833/static/js/main.1b274e27.chunk.js.map",
+    "runtime-main.js": "/lode20211211833/static/js/runtime-main.34824f29.js",
+    "runtime-main.js.map": "/lode20211211833/static/js/runtime-main.34824f29.js.map",
+    "static/js/2.d3206a22.chunk.js": "/lode20211211833/static/js/2.d3206a22.chunk.js",
+    "static/js/2.d3206a22.chunk.js.map": "/lode20211211833/static/js/2.d3206a22.chunk.js.map",
+    "static/js/3.be2b520a.chunk.js": "/lode20211211833/static/js/3.be2b520a.chunk.js",
+    "static/js/3.be2b520a.chunk.js.map": "/lode20211211833/static/js/3.be2b520a.chunk.js.map",
+    "index.html": "/lode20211211833/index.html",
+    "static/css/main.ea594fdb.chunk.css.map": "/lode20211211833/static/css/main.ea594fdb.chunk.css.map",
+    "static/js/2.d3206a22.chunk.js.LICENSE.txt": "/lode20211211833/static/js/2.d3206a22.chunk.js.LICENSE.txt",
+    "static/media/banner_1.3c9a049f.png": "/lode20211211833/static/media/banner_1.3c9a049f.png",
+    "static/media/banner_2.cb0645d3.png": "/lode20211211833/static/media/banner_2.cb0645d3.png",
+    "static/media/banner_3.803b4e42.png": "/lode20211211833/static/media/banner_3.803b4e42.png",
+    "static/media/featuredgame_bg.1f3aa2ec.jpg": "/lode20211211833/static/media/featuredgame_bg.1f3aa2ec.jpg",
+    "static/media/footerbg.fe516e49.jpg": "/lode20211211833/static/media/footerbg.fe516e49.jpg",
+    "static/media/heroarea.abaa02a5.png": "/lode20211211833/static/media/heroarea.abaa02a5.png",
+    "static/media/icon1.b32731f3.png": "/lode20211211833/static/media/icon1.b32731f3.png",
+    "static/media/icon2.6b052e54.png": "/lode20211211833/static/media/icon2.6b052e54.png",
+    "static/media/icon3.05082d63.png": "/lode20211211833/static/media/icon3.05082d63.png",
+    "static/media/logo_new.1f6cf27e.png": "/lode20211211833/static/media/logo_new.1f6cf27e.png",
+    "static/media/newsletter.ba325d0c.jpg": "/lode20211211833/static/media/newsletter.ba325d0c.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.34824f29.js",
+    "static/js/2.d3206a22.chunk.js",
+    "static/css/main.ea594fdb.chunk.css",
+    "static/js/main.1b274e27.chunk.js"
+  ]
+}
