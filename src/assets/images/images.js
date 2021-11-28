@@ -13,6 +13,14 @@ import feature_icon3 from './lode/feature/icon3.png';
 import game_icon1 from './lode/game/icon1.png';
 import game_icon2 from './lode/game/icon2.png';
 import game_icon3 from './lode/game/icon3.png';
+import breadcrumb_lottery from './lode/breadcrumb/lottery.png';
+import danhde from './lode/nap/danhde.png';
+import naptien from './lode/nap/naptien-icon.png';
+import ruttien from './lode/nap/ruttien-icon.png';
+import doso from './lode/mayquayso.png';
+import mienbac from './lode/dai/mienbac.jpg';
+import mientrung from './lode/dai/mientrung.jpg';
+import miennam from './lode/dai/miennam.jpg';
 
 const images = {
 	//lode
@@ -31,5 +39,13 @@ const images = {
 	game_icon2: game_icon2,
 	game_icon3: game_icon3,
 	featuredgame_bg: featuredgame_bg,
+	breadcrumb_lottery: breadcrumb_lottery,
+	naptien : naptien,
+	danhde : danhde,
+	ruttien : ruttien,
+	doso : doso,
+	mienbac : mienbac,
+	mientrung : mientrung,
+	miennam : miennam
 };
 export default images;

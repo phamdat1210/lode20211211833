@@ -1,12 +1,13 @@
+import React from 'react';
 import {Route, Switch} from "react-router-dom";
-import HomePage from "../lode/pages/HomePage";
+import LotteryPage from '../lode/pages/Lottery/LotteryPage';
 import PATH from './path';
 
 const HomeRoutes = () => {
 	return (
 		<Switch>
-			<Route exact path={PATH.HOME}>
-				<HomePage/>
+			<Route exact path={PATH.LOTTERY}>
+				<LotteryPage/>
 			</Route>
 		</Switch>
 	);

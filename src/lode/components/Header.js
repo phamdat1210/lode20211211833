@@ -3,30 +3,31 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 import { fab } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from 'react-router-dom';
+import PATH from '../../routes/path'
 
 library.add(fas, fab);
 
 const Header = () => {
 
-	const [lotterys, setLotterys] = React.useState([
+	const lotterys = [
 		{
 			name: 'Miền bắc',
-			link: ''
+			link: '?name=mienbac'
 		},
 		{
 			name: 'Miền trung',
-			link: ''
+			link: '?name=mientrung'
 		},
 		{
 			name: 'Miền nam',
-			link: ''
+			link: '?name=miennam'
 		},
 		{
 			name: 'Lô đề siêu tốc',
-			link: ''
+			link: '?name=sieutoc'
 		},
-	]);
-
+	];
 
 	return (
 		<header className="header">
@@ -45,7 +46,7 @@ const Header = () => {
 										</li>
 										<li>
 											<p>
-												<FontAwesomeIcon icon={['fas','envelope']} /><a href="#">{' datph@hqltech.vn'}</a>
+												<FontAwesomeIcon icon={['fas','envelope']} /><a href="/#">{' datph@hqltech.vn'}</a>
 											</p>
 										</li>
 										{/* <li>
@@ -79,7 +80,7 @@ const Header = () => {
 															</ul>
 														</li>
 													</ul>
-													<a href="cart.html" className="link-btn">{'Thanh toán'}</a>
+													<a href="/#" className="link-btn">{'Thanh toán'}</a>
 												</div>
 											</div>
 										</li>
@@ -100,7 +101,7 @@ const Header = () => {
 											</div>
 										</li> */}
 										<li>
-											<a href="#" className="sign-in" data-toggle="modal" data-target="#login">
+											<a href="/#" className="sign-in" data-toggle="modal" data-target="#login">
 												<FontAwesomeIcon icon={['fas','user']} /> {'Đăng nhập'}
 											</a>
 										</li>
@@ -118,8 +119,8 @@ const Header = () => {
 					<div className="row">
 						<div className="col-lg-12">
 							<nav className="navbar navbar-expand-lg navbar-light">
-								<a className="navbar-brand" href="#">
-									{/* <img src="assets/images/logo.png" alt="" /> */}
+								<a className="navbar-brand" href="/#">
+									{/* <img src="https://hqltech.vn/assets/images/logo.svg" alt="" /> */}
 								</a>
 								<button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_menu" aria-controls="main_menu" aria-expanded="false" aria-label="Toggle navigation">
 									<span className="navbar-toggler-icon" />
@@ -127,31 +128,36 @@ const Header = () => {
 								<div className="collapse navbar-collapse fixed-height" id="main_menu">
 									<ul className="navbar-nav ml-auto">
 										<li className="nav-item">
-											<a className="nav-link active" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											<Link className="nav-link active" to={PATH.HOME} role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 												{'Trang chủ'}
-											</a>
+											</Link>
 										</li>
 										<li className="nav-item">
-											<a className="nav-link" href="play.html">{'Trò chơi'}
+											<Link className="nav-link" to={PATH.PAY} role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+												{'Nạp thẻ'}
+											</Link>
+										</li>
+										<li className="nav-item">
+											<a className="nav-link" href="/#">{'Trò chơi'}
 												<div className="mr-hover-effect" /></a>
 										</li>
 										<li className="nav-item dropdown">
-											<a className="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-												{'Xổ số'}
+											<a className="nav-link dropdown-toggle" href="/#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+												{'Lô đề'}
 												<div className="mr-hover-effect" />
 											</a>
 											<ul className="dropdown-menu">
 												{lotterys.map((item,index)=>(
 													<li key={index}>
-														<a className="dropdown-item" href={item.link}>
+														<Link className="dropdown-item" to={`${PATH.LOTTERY}${item.link}`}>
 															<FontAwesomeIcon icon={['fas','angle-double-right']} /> {item.name}
-														</a>
+														</Link>
 													</li>
 												))}
 											</ul>
 										</li>
 										<li className="nav-item">
-											<a className="nav-link" href="tournaments.html">{'Giải đấu'}
+											<a className="nav-link" href="/#">{'Giải đấu'}
 												<div className="mr-hover-effect" /></a>
 										</li>
 										{/* <li className="nav-item dropdown">
@@ -173,11 +179,11 @@ const Header = () => {
 											</ul>
 										</li> */}
 										<li className="nav-item">
-											<a className="nav-link" href="contact.html">Liên hệ
+											<a className="nav-link" href="/#">Liên hệ
 												<div className="mr-hover-effect" /></a>
 										</li>
 									</ul>
-									<a href="#" className="mybtn1" data-toggle="modal" data-target="#signin"> {'Tham gia ngay'}</a>
+									<a href="/#" className="mybtn1" data-toggle="modal" data-target="#signin"> {'Tham gia ngay'}</a>
 								</div>
 							</nav>
 						</div>

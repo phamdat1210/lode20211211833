@@ -14,7 +14,7 @@ const Login = () => {
 					<button type="button" className="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
 					<div className="modal-body">
 						<div className="logo-area">
-							<img className="logo" src="assets/images/logo.png" alt="" />
+							<img className="logo" src={"assets/images/logo.png"} alt="" />
 						</div>
 						<div className="header-area">
 							<h4 className="title">Chào mừng BẠN TRỞ LẠI!</h4>
@@ -37,7 +37,7 @@ const Login = () => {
 											<label htmlFor="input-save-password"> Ghi nhớ mật khẩu</label>
 										</div>
 										<div className="right">
-											<a href="#">
+											<a href="/#">
 												Quên mật khẩu?
 											</a>
 										</div>
@@ -50,7 +50,7 @@ const Login = () => {
 						</div>
 						<div className="form-footer">
 							<p>Không phải là thành viên?
-								<a href="#">Tạo tài khoản <FontAwesomeIcon icon={['fas','angle-double-right']} /></a>
+								<a href="/#">Tạo tài khoản <FontAwesomeIcon icon={['fas','angle-double-right']} /></a>
 							</p>
 						</div>
 					</div>

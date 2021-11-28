@@ -22,7 +22,7 @@ const HomePage = () => {
 										cuộc thi với phần thưởng cao tại ...!
 									</p>
 									<div className="links">
-										<a href="#" className="mybtn1 link1">Bắt đầu ngay nào !</a>
+										<a href="/#" className="mybtn1 link1">Bắt đầu ngay nào !</a>
 									</div>
 								</div>
 							</div>
