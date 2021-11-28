@@ -3,6 +3,8 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 import { fab } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from 'react-router-dom';
+import PATH from '../../routes/path'
 
 library.add(fas, fab);
 
@@ -11,22 +13,21 @@ const Header = () => {
 	const [lotterys, setLotterys] = React.useState([
 		{
 			name: 'Miền bắc',
-			link: ''
+			link: '?name=mienbac'
 		},
 		{
 			name: 'Miền trung',
-			link: ''
+			link: '?name=mientrung'
 		},
 		{
 			name: 'Miền nam',
-			link: ''
+			link: '?name=miennam'
 		},
 		{
 			name: 'Lô đề siêu tốc',
-			link: ''
+			link: '?name=sieutoc'
 		},
 	]);
-
 
 	return (
 		<header className="header">
@@ -119,7 +120,7 @@ const Header = () => {
 						<div className="col-lg-12">
 							<nav className="navbar navbar-expand-lg navbar-light">
 								<a className="navbar-brand" href="#">
-									{/* <img src="assets/images/logo.png" alt="" /> */}
+									{/* <img src="https://hqltech.vn/assets/images/logo.svg" alt="" /> */}
 								</a>
 								<button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_menu" aria-controls="main_menu" aria-expanded="false" aria-label="Toggle navigation">
 									<span className="navbar-toggler-icon" />
@@ -127,9 +128,9 @@ const Header = () => {
 								<div className="collapse navbar-collapse fixed-height" id="main_menu">
 									<ul className="navbar-nav ml-auto">
 										<li className="nav-item">
-											<a className="nav-link active" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											<Link className="nav-link active" to={PATH.HOME} role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 												{'Trang chủ'}
-											</a>
+											</Link>
 										</li>
 										<li className="nav-item">
 											<a className="nav-link" href="play.html">{'Trò chơi'}
@@ -137,15 +138,15 @@ const Header = () => {
 										</li>
 										<li className="nav-item dropdown">
 											<a className="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-												{'Xổ số'}
+												{'Lô đề'}
 												<div className="mr-hover-effect" />
 											</a>
 											<ul className="dropdown-menu">
 												{lotterys.map((item,index)=>(
 													<li key={index}>
-														<a className="dropdown-item" href={item.link}>
+														<Link className="dropdown-item" to={`${PATH.LOTTERY}${item.link}`}>
 															<FontAwesomeIcon icon={['fas','angle-double-right']} /> {item.name}
-														</a>
+														</Link>
 													</li>
 												))}
 											</ul>

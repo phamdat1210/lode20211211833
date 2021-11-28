@@ -13,6 +13,7 @@ import feature_icon3 from './lode/feature/icon3.png';
 import game_icon1 from './lode/game/icon1.png';
 import game_icon2 from './lode/game/icon2.png';
 import game_icon3 from './lode/game/icon3.png';
+import breadcrumb_lottery from './lode/breadcrumb/lottery.png'
 
 const images = {
 	//lode
@@ -31,5 +32,6 @@ const images = {
 	game_icon2: game_icon2,
 	game_icon3: game_icon3,
 	featuredgame_bg: featuredgame_bg,
+	breadcrumb_lottery: breadcrumb_lottery,
 };
 export default images;
