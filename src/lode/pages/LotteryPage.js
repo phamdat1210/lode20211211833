@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import images from '../../assets/images/images';
 import CommonMain from '../CommonMain';
 import ContentHeader from '../components/ContentHeader';
@@ -26,11 +26,62 @@ const LotteryPage = () => {
 
 	const [amoutK, setAmoutK] = React.useState(0);
 
-	const FomartNumber = (value) => {
-		let regx = new RegExp('/^\d+$/');
+	const [arrayPicker, setArrrayPicker] = React.useState([])
+
+	React.useEffect(()=>{
+		let i = 0;
+		let update = [];
+		Array.from(Array(100)).map((e)=>{
+			update.push(i)
+			i++;
+		})
+		setArrrayPicker(update);
+	},[]);
+
+	const [activeChecked, setActiveChecked] = useState([]);
+
+	const onCheckValue = (value) => {
+		console.log('1|'+value)
+		let fil = activeChecked.filter(e=>e !== value);
+		console.log('2|'+activeChecked)
+		if(fil.length === activeChecked.length) {
+			setActiveChecked([...activeChecked, value])
+		}
+		else {
+			setActiveChecked(fil)
+		}
+	};
+
+	const outStyle = (value) => {
 		console.log(value)
-		console.log(regx.test(parseInt(value)))
+		let fil = activeChecked.filter(e=>e !== value);
+		if(fil.length === activeChecked.length) {
+			return "activeS"
+		}
+		else {
+			return ""
+		}
 	}
+
+	const ItemArrayPicker = ({arrays = []}) => {
+		let i = -1
+		return Array.from(Array(arrays.length / 10)).map((e,index)=>{
+			return(
+				<tr key={index}>
+					{Array.from(Array(arrays.length / 10)).map((e,index)=>{
+						i++;
+						return(
+							<td onClick={()=>onCheckValue(index)} key={index}>
+								<span className={`so ${outStyle(index)}`}>
+							    	<span className="so-item">{i}</span>
+								</span>
+							</td>
+						)
+					})}
+				</tr>
+			)
+		});
+	};
 
 	return (
 		<CommonMain>
@@ -53,9 +104,24 @@ const LotteryPage = () => {
 										<form>
 											<div className="row">
 												<div className="col-xs-3">
-													<div className="info-box">
 														<p>{'Tổng tiền cược (K)'}</p>
-														<input onChange={e=>FomartNumber(e.target.value)}/>
+														<input type={'number'} min={0}/>
+												</div>
+												<div className="col-xs-9">
+													<div className="info-box">
+														<table style={{width: '100%', height: '100%'}}>
+															<tbody>
+																<tr>
+																	<td colSpan="10">
+																		<table style={{width: '100%', height: '100%'}}>
+																			<tbody>
+																				 <ItemArrayPicker arrays={arrayPicker}/>
+																			</tbody>
+																		</table>
+																	</td>
+																</tr>
+															</tbody>
+														</table>
 													</div>
 												</div>
 											</div>
@@ -66,7 +132,6 @@ const LotteryPage = () => {
 						</div>
 					</div>
 				</div>
-
 			</section>
 		</CommonMain>
 	)
