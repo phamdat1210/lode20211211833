@@ -26,8 +26,8 @@ const Header = () => {
 		{
 			name: 'Lô đề siêu tốc',
 			link: '?name=sieutoc'
-		},
-	];
+		}
+	]
 
 	return (
 		<header className="header">
@@ -119,7 +119,8 @@ const Header = () => {
 					<div className="row">
 						<div className="col-lg-12">
 							<nav className="navbar navbar-expand-lg navbar-light">
-								<a className="navbar-brand" href="/#">
+								<a className="navbar-brand" href="/#"/>
+								<a className="navbar-brand" href="#">
 									{/* <img src="https://hqltech.vn/assets/images/logo.svg" alt="" /> */}
 								</a>
 								<button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_menu" aria-controls="main_menu" aria-expanded="false" aria-label="Toggle navigation">
@@ -142,7 +143,12 @@ const Header = () => {
 												<div className="mr-hover-effect" /></a>
 										</li>
 										<li className="nav-item dropdown">
-											<a className="nav-link dropdown-toggle" href="/#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											<a className="nav-link dropdown-toggle"
+											   href="/#" role="button" data-toggle="dropdown"
+											   aria-haspopup="true" aria-expanded="false"/>
+											<a className="nav-link dropdown-toggle"
+											   href="#" role="button"
+											   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 												{'Lô đề'}
 												<div className="mr-hover-effect" />
 											</a>
@@ -160,24 +166,6 @@ const Header = () => {
 											<a className="nav-link" href="/#">{'Giải đấu'}
 												<div className="mr-hover-effect" /></a>
 										</li>
-										{/* <li className="nav-item dropdown">
-											<a className="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-												Pages
-												<div className="mr-hover-effect" />
-											</a>
-											<ul className="dropdown-menu">
-												<li><a className="dropdown-item" href="about.html"> <i className="fa fa-angle-double-right" />About</a></li>
-												<li><a className="dropdown-item" href="affiliate.html"> <i className="fa fa-angle-double-right" />Affiliate</a></li>
-												<li><a className="dropdown-item" href="awards.html"> <i className="fa fa-angle-double-right" />Awards</a></li>
-												<li><a className="dropdown-item" href="bonus.html"> <i className="fa fa-angle-double-right" />Bonus</a></li>
-												<li><a className="dropdown-item" href="cart.html"> <i className="fa fa-angle-double-right" />Cart</a></li>
-												<li><a className="dropdown-item" href="faq.html"> <i className="fa fa-angle-double-right" />Faq</a></li>
-												<li><a className="dropdown-item" href="how-it-work.html"> <i className="fa fa-angle-double-right" />How It Work</a></li>
-												<li><a className="dropdown-item" href="terms-conditions.html"> <i className="fa fa-angle-double-right" />Terms &amp; Condition</a></li>
-												<li><a className="dropdown-item" href="terms-conditions-details.html"> <i className="fa fa-angle-double-right" />Condition Details</a></li>
-												<li><a className="dropdown-item" href="404.html"> <i className="fa fa-angle-double-right" />404</a></li>
-											</ul>
-										</li> */}
 										<li className="nav-item">
 											<a className="nav-link" href="/#">Liên hệ
 												<div className="mr-hover-effect" /></a>
